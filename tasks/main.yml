@@ -8,3 +8,6 @@
 
 - include: rabbitmq-configure.yml
 
+- name: ensure rabbitmq-server is started and enabled
+  service: name=rabbitmq-server enabled=yes state=started
+

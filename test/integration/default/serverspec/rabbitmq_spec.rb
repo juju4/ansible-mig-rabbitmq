@@ -35,5 +35,6 @@ describe command('rabbitmqctl status') do
   its(:stdout) { should match /Status of node / }
   its(:stdout) { should match /{memory,\[{total,/ }
   its(:exit_status) { should eq 0 }
+  let(:sudo_options) { '-u rabbitmq -H' }
 end
 
