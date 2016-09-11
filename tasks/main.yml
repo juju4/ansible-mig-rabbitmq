@@ -1,0 +1,10 @@
+---
+
+- set_fact:
+    certificate_cn: "{{ ansible_fqdn }}"
+
+- include: rabbitmq-certificates.yml
+  when: mig_rabbitmq_ssl is defined and mig_rabbitmq_ssl
+
+- include: rabbitmq-configure.yml
+
