@@ -107,6 +107,11 @@ $ vagrant ssh
 * memory
 Ensure you have enough memory and swap available. On vagrant 512M+swap or 1024M seems to be fine.
 
+* change of hostname can be impacting on rabbitmq
+http://stackoverflow.com/questions/29501234/rabbtimqadmin-could-not-connect-errno-2-name-or-service-not-known/29502570#29502570
+
+* if using non-resolvable name, add inventory_hostname to /etc/hosts
+
 
 ## License
 

@@ -14,5 +14,5 @@
     - rabbitmq_conf_ssl_listeners_address: 0.0.0.0
   roles:
     - Mayeu.RabbitMQ
-    - mig-rabbitmq
+    - juju4.mig-rabbitmq
 
