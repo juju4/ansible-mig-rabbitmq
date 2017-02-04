@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/juju4/ansible-mig-rabbitmq.svg?branch=master)](https://travis-ci.org/juju4/ansible-mig-rabbitmq)
+[![Build Status - Master](https://travis-ci.org/juju4/ansible-mig-rabbitmq.svg?branch=master)](https://travis-ci.org/juju4/ansible-mig-rabbitmq)
+[![Build Status - Devel](https://travis-ci.org/juju4/ansible-mig-rabbitmq.svg?branch=devel)](https://travis-ci.org/juju4/ansible-mig-rabbitmq/branches)
 
 # MIG-Rabbitmq ansible role
 
@@ -14,10 +15,11 @@ Agents packages build is done on rabbitmq server as it use its certificates.
 It was tested on the following versions:
  * 1.9
  * 2.0
+ * 2.2
 
 ### Operating systems
 
-Tested with vagrant and kitchen mostly on ubuntu trusty or xenial and centos7
+Ubuntu 14.04, 16.04 and Centos7
 
 ## Example Playbook
 
@@ -28,7 +30,7 @@ For example
 - hosts: migserver
   roles:
     - Mayeu.RabbitMQ
-    - mig-rabbitmq
+    - juju4.mig-rabbitmq
 
 ```
 
@@ -84,14 +86,14 @@ Default kitchen config (.kitchen.yml) is lxd-based, while (.kitchen.vagrant.yml)
 Once you ensured all necessary roles are present, You can test with:
 ```
 $ gem install kitchen-ansible kitchen-lxd_cli kitchen-sync kitchen-vagrant
-$ cd /path/to/roles/mig-rabbitmq
+$ cd /path/to/roles/juju4.mig-rabbitmq
 $ kitchen verify
 $ kitchen login
 $ KITCHEN_YAML=".kitchen.vagrant.yml" kitchen verify
 ```
 or
 ```
-$ cd /path/to/roles/mig-rabbitmq/test/vagrant
+$ cd /path/to/roles/juju4.mig-rabbitmq/test/vagrant
 $ vagrant up
 $ vagrant ssh
 ```
@@ -116,6 +118,4 @@ http://stackoverflow.com/questions/29501234/rabbtimqadmin-could-not-connect-errn
 ## License
 
 BSD 2-clause
-
-
 
