@@ -56,10 +56,12 @@ keyUsage                        = keyCertSign, cRLSign
 basicConstraints    = CA:FALSE
 keyUsage        = digitalSignature, keyEncipherment
 ## http://wiki.cacert.org/FAQ/subjectAltName
+## https://www.reddit.com/r/sysadmin/comments/677hep/chrome_58_not_supporting_self_signed_certificates/
+##
 subjectAltName  = @alt_names
 
 [alt_names]
-{% if mig_rabbitmq_cert_san is defined and mig_rabbitmq_cert_san != '' %}
+{% if mig_rabbitmq_cert_san is defined and mig_rabbitmq_cert_san != [] %}
 {% for e in mig_rabbitmq_cert_san %}
 {{ e }}
 {% endfor %}
