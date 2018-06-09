@@ -33,7 +33,12 @@ end
 
 describe command('rabbitmqctl status') do
   its(:stdout) { should match /Status of node / }
-  its(:stdout) { should match /{memory,\[{total,/ }
+  its(:stdout) { should match /{memory,/ }
+  its(:stdout) { should match /{kernel,{net_ticktime/ }
+  its(:stdout) { should match /{pid,/ }
+  its(:stdout) { should match /{asn1,/ }
+  its(:stdout) { should match /{rabbit_common,/ }
+  its(:stdout) { should match /\[{rabbit,"RabbitMQ"/ }
   its(:exit_status) { should eq 0 }
   let(:sudo_options) { '-u rabbitmq -H' }
 end
