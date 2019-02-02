@@ -107,4 +107,3 @@
     - "{{ mig_rabbitmq_clientdir }}/agent.key"
     - "{{ mig_rabbitmq_clientdir }}/agent.crt"
   when: mig_rabbitmq_pull is defined and mig_rabbitmq_pull
-

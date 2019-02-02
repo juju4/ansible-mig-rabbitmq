@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: mig-rabbitmq
   author: juju4
   description: Mozilla Investi Gator - RabbitMQ server
   license: BSD
@@ -29,4 +30,4 @@ galaxy_info:
   - security
 dependencies:
   - Mayeu.RabbitMQ
-  - juju4.redhat-epel
+  - juju4.redhat_epel

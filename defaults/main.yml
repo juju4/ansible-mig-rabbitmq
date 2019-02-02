@@ -39,4 +39,3 @@ mig_rabbitmq_clientdir: "{{ mig_home }}/client"
 ## recover files on orchestrator? where?
 mig_rabbitmq_pull: true
 mig_rabbitmq_pulldir: tmp
-

@@ -46,5 +46,8 @@
 # harden rabbitmq config
 
 - name: set mirroring policy
-  rabbitmq_policy: vhost="{{ mig_rabbitmq_vhost }}" name=mig-mirror-all pattern='"^(toschedulers|toagents|toworkers|mig(|event))\.' tags="ha-mode=all"
-
+  rabbitmq_policy:
+    vhost: "{{ mig_rabbitmq_vhost }}"
+    name: mig-mirror-all
+    pattern: '"^(toschedulers|toagents|toworkers|mig(|event))\.'
+    tags: "ha-mode=all"
